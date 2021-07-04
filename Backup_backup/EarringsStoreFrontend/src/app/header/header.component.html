@@ -1,0 +1,74 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+
+<div class="container-fluid largedevice " >
+    <nav class="navbar navbar-expand-lg navbar-light ">
+    <a class="navbar-brand" href="#"></a>
+    <img src="assets/icon.png" style="width: 50px; height:40px; margin-left: 100px; margin-right: 0.3rem;"/>
+    <h2 style="font-size: larger; letter-spacing: 0.3rem;font-weight: 700; color: #fc8eac; " > EVERSTYLISH</h2>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+   
+    <div class="dropdown" style="margin-left: 30rem;">
+      <i class="fa fa-user userIcon" style="margin-left: 30rem;" aria-hidden="true"></i>
+      <div class="dropdown-content" style="margin-left: 25rem;">
+        <a href="#">My WishList</a>
+        <hr style="width: 80% ; ">
+        <a   routerLink="/app-authorization" >Login/SignUp</a>
+        <hr style="width: 80%;">
+        <a href="#" *ngIf="ifadmin">Admin board</a>
+      </div>
+    </div>
+
+   
+    <div class="dropdown" style="position: relative;">
+      <i class="fas fa-bars menuIcon" style="margin-left: 30rem;" aria-hidden="true"></i>
+      <div class="dropdown-content" style="margin-left: 25rem;">
+        <a  routerLink="/neckpieces" >Neckpieces</a>
+        <hr style="width: 80% ; ">
+        <a   routerLink="/rings" >Rings</a>
+        <hr style="width: 80%;">
+        <a routerLink="/earrings">Earrings</a>
+        <hr style="width: 80%;">
+        <a routerLink="/bracelets">Bracelets</a>
+      </div>
+    </div>
+
+  <i class="fa fa-shopping-cart shoppingIcon" (click)="shoppingCart()" aria-hidden="true"></i>
+</nav>
+</div>
+<!---Nav bar for mobile -->
+  <div class="container-fluid mobdevice ">
+    
+    
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded mobdevice ">
+      <a class="navbar-brand" href="#">
+        <img src="assets/icon.png" style="width: 50px; height:40px; margin-left:3rem; "/>
+    <h2 style="font-size: larger; letter-spacing: 0.3rem;font-weight: 700; color: #fc8eac; margin-left:3rem; " > EVERSTYLISH</h2>
+    
+
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav dropdown-menu">
+          <li class="nav-item active">  
+            <a class="dropdown-item " href="#"  routerLink="">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="dropdown-item" href="#" routerLink="/app-authorization">Login/Signup</a>
+          </li>
+          <li class="nav-item">
+            <a class="dropdown-item" href="#"  routerLink="/cart" (click)="shoppingCart()" >Cart</a>
+           </li>
+              
+          </ul>  
+      </div>
+    </nav>
+  </div>

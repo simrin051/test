@@ -1,0 +1,113 @@
+
+
+  <script>
+    $(document).ready(function() {
+       $("#MyModal").modal();
+      
+
+       $('#myModal').on('shown.bs.modal', function() {
+          $('#myInput').focus();
+       }); 
+       $("#createAccount").click(function(){
+     $(".createAccount").css('display', 'block');
+     console.log("Executed");
+     $(".createAccount").show();
+    });
+  
+  });
+
+</script>    
+<html>
+ <!-- <app-header></app-header> -->
+<div id="MyModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" style=" color: white;" ><i class="fa fa-sign-in" aria-hidden="true"></i>SIGN IN</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <h5>REGISTERED CUSTOMERS</h5>
+            <hr/>
+            <form [formGroup]="loginForm">
+            <div class="form-group">
+                <input type="username" class="form-control rounded-0"   placeholder="Username*" formControlName="username">
+              </div>
+              <div *ngIf="loginForm.controls['username'].invalid && (loginForm.controls['username'].dirty || loginForm.controls['username'].touched)" class="alert">
+                <div *ngIf="loginForm.controls['username'].errors?.required">
+                Please enter username
+              </div>
+            </div>
+              <div class="form-group">
+                <input type="password" class="form-control rounded-0"  placeholder="Password*" formControlName="password">
+              </div>
+              <div *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)" class="alert">
+                <div *ngIf="loginForm.controls['password'].errors?.required">
+                Please enter password
+              </div>
+            </div>
+              <div class="authenticate col-md-12">
+               
+              <button type="button" class="Login btn  btn-block btn-lg col-md-7 rounded-0" (click)="login()" >Login</button>
+              <div class="options col-md-5">
+                Forgot your password?<br/>  
+                <a  id="createAccount" data-toggle="modal" data-target="createAccount"  style="cursor: pointer;" (click)="createAccountshow()" >Create New Account?</a>
+                Login With OTP?
+              </div>
+              </div>    
+            </form>
+            <div class="form-group">
+            <a href="" style="margin-bottom: -30px;position: absolute; margin-left:5px; color: black;text-decoration:none;">Back</a>
+          </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="badcredentials" *ngIf="!isValid"> 
+          
+          <p style="color:#0492c2 ;text-align : center"><i class="fa fa-exclamation-circle" aria-hidden="true" style="color: darkred"></i> Invalid login or password.</p>
+        </div>
+     <!--
+          <div class="modal fade col-md-6 offset-md-3 " role="dialog" id="createAccount">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                  <form formGroup="signUpForm" >
+                    <div class="form-group">
+                        Name  <span class="required-asterisk">*</span>
+                        <input type="name" class="form-control rounded-0" id="name" required >
+                      </div>
+                      <div class="form-group">
+                        Email  <span class="required-asterisk">*</span>
+                        <input type="email" class="form-control rounded-0" id="email" required >
+                      </div>
+                      <div class="form-group">
+                        Password   <span class="required-asterisk">*</span>
+                        <input type="password" class="form-control rounded-0" id="password" required>
+                      </div>
+                      <div class="form-group">
+                        Confirm Password  <span class="required-asterisk">*</span>
+                        <input type="password" class="form-control rounded-0" id="confirmpassword" required>
+                      </div>
+                      <div class="form-group">
+                        Mobile Number    <span class="required-asterisk">*</span>
+                        <input type="tel" class="form-control rounded-0" id="tel" required >
+                      </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+
+              </div>
+              </div>
+              </div>
+-->            
+        
+            </html>

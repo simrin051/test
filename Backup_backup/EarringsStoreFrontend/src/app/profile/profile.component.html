@@ -1,0 +1,35 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="profile col-xs-12 ">
+    <h2 class="col-xs-12" style="font-weight: bolder;color:#808080">{{data.name}}</h2>
+   
+    <div class="col-md-12  col-xs-12 ">
+ 
+    <div class="col-md-6 col-xs-12 left" style="background: url({{data.url}}) no-repeat; background-size: 500px 500px;"></div> 
+    
+    <div class="col-md-6 col-xs-12 right">
+        <div class="row" style="margin-top: 20%; margin-left: 10%;">
+            <div class="row" style="margin-left: 1%; position: absolute;font-weight: 20px;color:#808080">
+                {{data.price}}
+            </div>
+            <div class="row">
+            <p style="color:#808080;font-weight: 20px"> QTY</p>
+          
+            <mat-select [(ngModel)]="Qty" class="Qty" id="#" style="width: 50px; height: 20px;margin-left: 10%;" > 
+                <mat-option  value="1">1</mat-option >
+                <mat-option  value="2">2</mat-option >
+                <mat-option  value="3">3</mat-option >
+                <mat-option  value="4">4</mat-option >
+                <mat-option  value="5">5</mat-option >
+            </mat-select>
+           
+            <button type="button" class="btn btn-default button" (click)="AddToBag(data)">ADD TO BAG</button>
+          </div>
+  
+    </div>
+
+    </div>
+    </div>
+</div>
+ 
+</div>   

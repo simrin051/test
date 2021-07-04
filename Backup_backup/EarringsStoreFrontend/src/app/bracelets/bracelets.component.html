@@ -1,0 +1,15 @@
+
+<div class="container-fluid">
+  <app-header></app-header> 
+    <div class="row">
+    <div *ngFor="let bracelet of bracelets" class="section col-md-3 col-6" >
+        <div class="sectionarea"> 
+        <img src= {{bracelet.url}} (click)="onClick(bracelet)"/>
+        <p>{{bracelet.name}}</p> 
+        <p>{{bracelet.price}}</p>
+         </div>
+
+    </div>
+</div>
+</div>
+
