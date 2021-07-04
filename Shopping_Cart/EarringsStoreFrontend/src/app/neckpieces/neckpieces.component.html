@@ -1,0 +1,14 @@
+<app-header></app-header>
+<div class="container-fluid">
+
+    <div class="row">
+    <div *ngFor="let neckpiece of neckpieces" class="section col-md-3 col-6" >
+        <div class="sectionarea"> 
+        <img src= {{neckpiece.url}} (click)="onClick(neckpiece)"/>
+        <p>{{neckpiece.name}}</p> 
+        <p>{{neckpiece.price}}</p>
+         </div>
+
+    </div>
+</div>
+</div>

@@ -1,0 +1,14 @@
+<app-header></app-header>
+<div class="container-fluid">
+
+    <div class="row">
+    <div *ngFor="let earring of earrings" class="section col-md-3 col-6" >
+        <div class="sectionarea"> 
+        <img src= {{earring.url}} (click)="onClick(earring)"/>
+        <p>{{earring.name}}</p> 
+        <p>{{earring.price}}</p>
+         </div>
+
+    </div>
+</div>
+</div>

@@ -1,0 +1,119 @@
+.userIcon {
+    font-size: 2rem;
+    margin-left: 40rem;
+    color: #fc8eac;
+    border-color: black;
+  }
+  .shoppingIcon
+  {
+    font-size: 2rem;
+    margin-left: 45rem;
+    color: #fc8eac;
+    border-color: black;
+  }
+  .menuIcon {
+    font-size: 2rem;
+    color: #fc8eac;
+    border-color: black;
+  }
+  
+
+  .dropdown {
+    position: absolute;
+    display: inline-block;
+    margin-right: 0rem;
+    width: 20px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    text-align: center;
+  }
+  
+  .dropdown-content a {
+    text-align: center;
+    color: black;
+    padding-right: 3rem;
+    padding-left: 3rem;
+  
+    background-color: white;
+    width: 12rem;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    color: #fc8eac;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  a:first-child {
+    padding-top: 1rem;
+  }
+  
+  a:last-child {
+    padding-bottom: 1rem;
+  }
+  .largedevice
+  {
+    visibility: visible;
+  
+  }
+  .mobdevice{
+    visibility: hidden;
+    display: none;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .largedevice{visibility: hidden; display: none;}
+    .mobdevice{visibility: visible; display: inline-block;}
+    .nav-item{margin-bottom: 10px;}
+ 
+  .dropdown-submenu:hover  {
+    display: block;
+    visibility: visible;
+    margin-top: 0; // remove the gap so it doesn't close
+ }
+  
+    .dropsubmenu:hover
+    {
+      color: red;
+    }
+  
+}
+/**
+  @media screen and (max-width: 600px) {
+    .largesize { visibility: hidden; display: none; }
+    .mobdevice{visibility: visible; display:block;}
+
+    .container-fluid a:not(:first-child) {display: none;}
+    .container-fluid a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .largesize { visibility: hidden; display: none; }
+    .mobdevice{visibility: visible; display:block;}
+
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+  **/
