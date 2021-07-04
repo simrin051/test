@@ -1,0 +1,14 @@
+<app-header></app-header>
+<div class="container-fluid">
+
+    <div class="row">
+    <div *ngFor="let ring of rings" class="section col-md-3 col-6" >
+        <div class="sectionarea "> 
+        <img src= {{ring.url}} (click)="onClick(ring)"/>
+        <p>{{ring.name}}</p> 
+        <p>{{ring.price}}</p>
+         </div>
+
+    </div>
+</div>
+</div>

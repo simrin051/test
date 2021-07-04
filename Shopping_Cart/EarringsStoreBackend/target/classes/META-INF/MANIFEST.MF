@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: dell
+Build-Jdk: 15.0.2
+Implementation-Title: EarringsStoreBackend
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.main
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/EarringsStoreBackend
+Created-By: Maven Integration for Eclipse
+

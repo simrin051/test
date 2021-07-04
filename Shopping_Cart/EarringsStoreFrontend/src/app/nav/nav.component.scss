@@ -1,0 +1,79 @@
+.container-fluid {
+  padding: 0;
+  max-height: 400px;
+}
+/**
+.dropdown {
+  position: absolute;
+  display: inline-block;
+  margin-right: 0rem;
+  width: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  text-align: center;
+}
+
+.dropdown-content a {
+  text-align: center;
+  color: black;
+  padding-right: 3rem;
+  padding-left: 3rem;
+
+  background-color: white;
+  width: 12rem;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  color: #fc8eac;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+a:first-child {
+  padding-top: 1rem;
+}
+
+a:last-child {
+  padding-bottom: 1rem;
+}
+
+**/
+@media (width:375px)
+{
+.margin-0
+{
+margin-left: 0;
+margin-right: 0;
+padding-right: 0;
+padding-left: 0;
+width:100%;
+}
+
+.container-fluid
+{
+ 
+  margin-left: 0%;
+  padding-left: 0;
+  left:0;
+  width:100%;
+  position: relative;
+}
+app-carousel
+{
+  margin-left: 0%;
+  left:0;
+  width:100%;
+  position: absolute;
+
+}
+}

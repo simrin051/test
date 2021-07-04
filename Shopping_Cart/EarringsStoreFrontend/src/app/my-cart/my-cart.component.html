@@ -1,0 +1,70 @@
+<p style="text-align: center; letter-spacing: 0.3rem;font-weight: 700; color: #fc8eac; ">SHOPPING BAG</p>
+<div class="col-md-12 col-12 cart container-fluid margin-0 padding-0">
+
+    
+    <div class="col-md-4 col-12 margin-0 padding-0">
+            <div class="totalorder margin-0 padding-0" *ngIf="cartitems!=null">
+            <table>
+                <tr>
+                    <td style="padding-right: 10px">Subtotal</td>
+                    <td>{{Subtotal}}</td>
+                </tr>
+                <tr style="border-bottom: 1px  solid #DCDCDC;">
+                   <td style="padding-right: 10px">Shipping<br/>
+                    (free for orders<br/> above Rs.600)</td> 
+                    <td>60.00</td>
+                </tr>        
+                <tr>
+                    <td><h5>Order Total</h5></td>
+                    <td>{{Ordertotal}}</td>
+                </tr>
+                <tr>
+                    <td>Expected Dispatch Date</td>
+                    <td>Between {{ prevdate | date }} and {{nextdate | date}}</td>
+                </tr>  
+           
+            </table>      
+            <button  mat-raised-button color="primary"  type="button" class="btn btn-default" style="width : 26em; background-color:black; color:white; margin-top: 10%;"  >Place the order</button>        
+        </div>
+        
+    </div>
+    <div class="col-md-8 col-12 listing ">
+        <div *ngFor="let item of cartitems">
+          
+            <div class="col-md-12 row form-group margin-0 padding-0">
+                <div class="col-md-3 col-4 img margin-0 padding-0">
+                    <img src= {{item.url}}  />
+                </div>
+                <div class="details col-6 margin-0 padding-0">
+                    <p>{{item.name}}
+                     <br/>Min. Dispatch time: 15-20 days
+                     <br/>Price: {{item.price}}
+                     <br/>
+                    </p>   
+                   
+                    Qty:<select ng-model="newObject[item.qty]" class="Qty" id="#" (change)="updatedQty($event, item)"   style="width: 50px; height: 20px;margin-left: 10%;" > 
+                     <!--   <option  [ngValue]=""   selected   disabled>{{item.qty}}</option> -->
+                  
+                        <option *ngFor="let quantity of quantaties" [value]="quantity" [disabled]="compare(item.qty,quantity)">
+                      
+                           {{quantity}} 
+                        
+                        </option>
+                    </select>
+                
+                    
+                    Remove<i class="fa fa-trash fa-fw" (click)="removeItem(item)"></i>
+
+                </div>   
+            </div>
+        </div>
+    </div>
+</div>
+<div class="totalorder margin-0 padding-0" *ngIf="cartitems==null">
+    <h2> Please login and add items to cart</h2>  
+</div>
+<app-footer></app-footer>
+
+<script type="text/javascript" src="typescript.min.js"></script>
+<script type="text/javascript" src="typescript.compile.min.js"></script>
+<script type="text/typescript" src="my-cart.component.ts"></script>
