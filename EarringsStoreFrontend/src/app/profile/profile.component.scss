@@ -1,0 +1,88 @@
+h2{
+  font: 1em sans-serif;
+  text-align: center;
+  margin-top: 5%;
+}
+.profile {
+  width: 100%;
+  height:100%;
+  position: absolute;
+
+}
+.left {
+  margin-top:5%;
+  margin-left: 15%;
+  position: absolute;
+  width: 700px;
+  height: 500px;
+  float: left;
+  
+  
+}
+.right {
+  margin-right: 0%;
+  width: 45%;
+  height: 70%;
+  float: right;
+  
+}
+.Qty,p
+{
+  color: #696969;
+ height: 10%;
+ margin-top:20%;
+ margin-right:5%;
+}
+.button
+{
+  background-color: #fc8eac;
+  color:white;
+  margin-top:20%;
+   
+}
+
+@media only screen and (max-width: 600px)
+{
+
+.left
+{
+width: 100%;
+margin-left:0px;
+margin-right: 0px;
+padding-right: 0px;
+padding-left: 0;
+left:0px;
+background-color: cadetblue;
+position: absolute;
+}
+
+.right
+{
+  top: 500px;
+  position: absolute;
+}
+h2
+{
+font-size: small;
+text-align: center;
+}
+.container-fluid
+{
+  left:0px;
+  margin-left:0px;
+  padding-left: 0;
+}
+.profile
+{
+  left:0px;
+  margin-left:0px;
+  padding-left: 0;
+
+}
+app-header
+ {
+   margin-left: 0px;
+   padding-left: 0;
+   left:0;
+ }   
+}

@@ -1,0 +1,74 @@
+.modal-header {
+  background-color: #fc8eac
+}
+.modal-body {
+  background-color: #fff;
+}
+i {
+  margin-right: 10px;
+  stroke: white;
+  stroke-width: 10;
+}
+
+.Login:hover {
+  background-color: #fc8eac;
+  color: white;
+}
+.Login {
+  display:block;
+  background-color: black;
+  color: white;
+
+  width: 310px;
+  outline: 1px solid black;
+}
+.form-control:focus {
+  border-color: black;
+  box-shadow: 13px 13px 0px 0px #ffffff;
+}
+.options 
+{
+  font-size:small;
+}
+.authenticate
+{
+  display: flex;
+
+}
+.required-asterisk{
+  color: red;
+  font-weight: bold;
+  margin-left: 3px;
+  font-size: 1em;
+}
+.createAccount
+{
+ color: red;
+  display:none;
+}
+
+.alert
+{
+border-color: #fc8eac;
+text-align: center;
+}
+
+.badcredentials
+{
+  background-color:#ffe6ea;
+  height: 5%;
+  width:50%;
+ margin:auto;
+
+}
+
+@media only screen and (max-width: 600px) {
+  .badcredentials
+  {
+    background-color:#ffe6ea;
+    height: 5%;
+    width:100%;
+  
+  
+  }
+}

@@ -1,0 +1,16 @@
+
+<div class="container-fluid padding-0 margin-0">
+
+    <div class="row padding-0 margin-0">
+    <div *ngFor="let section of sections" class="section col-md-3 col-6 padding-0" >
+        <div class="sectionarea"> 
+        <img src= {{section.url}}/>
+       <button type="button" class="btn btn-default " (click)="sectionCheck($event);" >{{section.name}}</button>
+       
+</div>
+
+    </div>
+</div>
+
+</div>
+<app-footer></app-footer>

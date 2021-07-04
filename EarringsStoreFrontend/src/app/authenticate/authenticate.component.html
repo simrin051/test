@@ -1,0 +1,43 @@
+<app-header></app-header> 
+<div id="MyModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" style=" color: white;" ><i class="fa fa-wpforms fa-2x" aria-hidden="true"></i>CREATE NEW ACCOUNT</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <form [formGroup]="signupForm"  (ngSubmit)="CreateAccount(signupForm)">
+         
+                <div class="form-group">
+                    Name  <span class="required-asterisk">*</span>
+                    <input type="name" placeholder=" " class="form-control rounded-0" id="userName" formControlName="userName" required >
+                  </div>
+                  <div class="form-group">
+                    Email  <span class="required-asterisk">*</span>
+                    <input type="email" placeholder=" " class="form-control rounded-0" id="email" formControlName="email" required >
+                  </div>
+                  <div class="form-group">
+                    Password   <span class="required-asterisk">*</span>
+                    <input type="password" placeholder=" " class="form-control rounded-0" id="password" formControlName="password" required>
+                  </div>
+                  <div class="form-group">
+                    Confirm Password  <span class="required-asterisk">*</span>
+                    <input type="password" placeholder=" " class="form-control rounded-0" id="confirmpassword" formControlName="cpassword" required>
+                  </div>
+                  <div class="form-group">
+                    Mobile Number    <span class="required-asterisk">*</span>
+                    <input type="tel" placeholder=" " class="form-control rounded-0" id="tel" formControlName="tel" required >
+                  </div>
+                  <button type="submit" class="Signup btn  btn-block btn-lg col-md-12 rounded-0">Create an Account</button>
+                </form>
+                <div class="form-group"></div>
+                <a href="/app-authorization" style="margin-bottom: -10px; color: black;text-decoration:none;">Back</a>
+            </div>
+        </div>
+      </div>
+  
+</div>
+   

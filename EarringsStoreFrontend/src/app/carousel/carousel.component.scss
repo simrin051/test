@@ -1,0 +1,16 @@
+ngb-carousel .wrapper {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+}
+
+ngb-carousel .wrapper > img {
+  width: 100%;
+  height: 100%;
+}
+
+.container-fluid {
+  padding: 0%;
+  height: 150px;
+}
